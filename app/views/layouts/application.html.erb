@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test1</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class="shell">
+  <div class="border">
+    <%= render "layouts/header" %>
+    <%= render "layouts/menu" %>
+
+    <div id="lpblock">
+      <div id="lpblockInner">
+        <% if @menu && @menu.ancestors.length==0 %>
+            <div id="archive-title">
+              <h2>Меню "<strong><%= @menu.name %></strong>"</h2>
+            </div>
+        <% end %>
+
+        <div class="breadcrumb">
+          <h4>
+            <% if @menu && @menu.ancestors.length>0 %>
+                <%= link_to I18n.t('home'), root_path %> &gt;
+                <% @menu.ancestors.each do |page| %>
+                    <%= link_to page.name, page %> &gt;
+                <% end %>
+                <span>
+                    <%= @menu.name %>
+                </span>
+            <% end %>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <section id="wrapper">
+      <div id="middle">
+        <div id="content">
+          <div id="colLeft">
+            <% if current_page?(url_for(:controller => 'static_pages', :action => 'home')) %>
+                <%= render "layouts/slider" %>
+            <% end %>
+            <article class="singlecont">
+              <%= yield %>
+            </article>
+          </div>
+          <div id="colRight">
+            <%= render "layouts/sidebar" %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%= render "layouts/footer" %>
+  </div>
+</div>
+</body>
+</html>

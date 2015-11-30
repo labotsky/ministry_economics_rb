@@ -1,0 +1,22 @@
+<footer id="footer">
+  <div id="footerInner">
+    <div class="logofooter">
+      <a href="http://beloweb.ru"><img src="http://beloweb.ru/wp-content/themes/beloweb/images/logo.png" /></a>
+    </div>
+
+    <div id="footernav">
+      <ul>
+        <% Menu.header.roots.each do |menu| %>
+            <%= content_tag :li, class: "page_item" do %>
+                <%= link_to menu.name, menu %>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="footericon">
+      <a class="icon-wp" href="http://wordpress.org/" rel="nofollow" target="_blank"></a>
+      <a class="icon-html" href="http://www.w3.org/html/logo/" rel="nofollow" target="_blank"></a>
+    </div>
+  </div>
+</footer>

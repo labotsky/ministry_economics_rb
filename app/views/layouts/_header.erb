@@ -1,0 +1,26 @@
+<header id="header">
+  <div id="headerInner">
+
+    <div class="logo">
+      <h1>Научно-исследовательский институт</h1>
+      <h1>Министерства экономики</h1>
+      <h1>Республики Беларусь</h1>
+    </div>
+
+    <div id="locale"/>
+        <%= link_to_unless_current "ENG", params.merge({locale: "en"}) %>
+        <%= link_to_unless_current "RU", params.merge({locale: "ru"}) %>
+        <%= link_to_unless_current "BEL", params.merge({locale: "be"}) %>
+    </div>
+
+    <nav class="topMenuRight">
+      <ul>
+        <% Menu.header.roots.each do |menu| %>
+            <%= content_tag :li, class: "page_item" do %>
+                <%= link_to menu.name, menu %>
+            <% end %>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,17 @@
+<div class="bottomMenubg">
+  <nav id="fdw">
+    <div class="bottomMenuhomelink">
+      <%= link_to "", root_path %>
+    </div>
+    <div class="menu-menyu-3-container">
+      <ul id="menu-menyu-3" class="menu">
+        <% Menu.main.roots.each do |menu| %>
+            <%= content_tag :li, class: "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children" do %>
+                <%= link_to menu.name, menu %>
+                <%= render 'submenus', menus: menu.children if menu.has_children? %>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>

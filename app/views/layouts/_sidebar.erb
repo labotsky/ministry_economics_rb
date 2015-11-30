@@ -1,0 +1,20 @@
+<% if !News.all.empty? %>
+<div class="rightBox"><h2><%= t "news" %></h2>
+  <ul>
+    <% News.last_news.each do |new_item| %>
+        <li>
+          <%= link_to new_item.title, new_item, title: new_item.title %>
+          <p class="description_news">
+            <%= new_item.body.split[0...30].join(' ')+"..." %>
+          </p>
+          <p class="news_count">
+            <%= "Просмотров: #{new_item.count}" %>
+          </p>
+          <p class="news_date">
+            <%= date_format(new_item.created_at) %>
+          </p>
+        </li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

@@ -1,0 +1,2323 @@
+/*
+Theme Name: Beloweb
+Version: 1.0
+Description: Адаптивный премиум шаблон от сайта beloweb.ru - Adapter
+Author: beloweb.ru
+Author URI: http://beloweb.ru/about
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+aside, nav, footer, header, section { display: block; }
+
+body {
+  width: 100%;
+  height: 100%;
+  color:#333;
+  background: #f7f7f7;
+  font-family: "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:0.94em;
+  line-height:135%;
+
+}
+
+ul {
+  list-style:none;
+}
+
+h1 {
+  font-size:30px;
+  font-weight:normal;
+  padding:0px 0 0px;
+  line-height:100%;
+  font-style:italic;
+
+}
+
+a {
+  color: #cd5252;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#963c3c;
+  text-decoration: none;
+}
+
+img {
+
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+img.wp-smiley {
+
+  margin: 0;
+  padding-bottom: 0px;
+  border: none;
+}
+#locale{
+  float: right;
+  margin: 5px;
+  a{
+    transition: 0.4s ease-in-out color;
+    font-family: "Segoe UI Semibold";
+    color:#fff;
+    &:hover{
+      color:#000;
+    }
+  }
+}
+
+.description_news{
+  font-size: 13px;
+  text-align: justify;
+  color: rgb(0, 0, 0);
+  margin-top: 5px;
+  border-top: 1px solid #ccc;
+}
+
+.news_count{
+  font-size: 12px;
+  float:left;
+}
+
+.news_date{
+  font-size: 12px;
+  float:right;
+}
+
+.logo h1{
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+  color: rgb(255, 255, 255);
+  font-family: "Segoe UI","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 30px;
+}
+
+/* -------------------------------
+Стрелка наверх
+----------------------------------*/
+
+/* Image style */
+#scrollUp {
+  bottom: 20px;
+  left: 20px;
+  width: 55px; /* Width of image */
+  height: 24px;  /* Height of image */
+  background: url(images/top.png) no-repeat;
+
+}
+
+#scrollUp:hover {
+  background: url(images/tophover.png) no-repeat;
+}
+
+/* -------------------------------
+Выделение текста
+----------------------------------*/
+
+::selection {background: #00b4f0; color: #fff;}
+::-moz-selection {background: #00b4f0; color: #fff}
+
+/* -------------------------------
+LAYOUT STRUCTURE
+----------------------------------*/
+
+#wrapper {
+  position:relative;
+  margin-top:40px;
+  border:0px solid #000;
+  width: 100%;
+  max-width:1200px;
+  margin: 0 auto;
+  height: auto  !important;
+
+}
+
+#header {
+  border: 0px solid #000;
+  background: #00b4f0;
+  position:relative;
+  width: 100%;
+  height:130px;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+#headerInner {
+  border: 0px solid #ccc;
+  position:relative;
+  width: 100%;
+  max-width:1200px;
+  height:130px;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+#content {
+  margin-top:30px;
+  border: 0px solid #1FA2E1;
+}
+
+#content #colLeft {
+  position:relative;
+  border: 0px solid #000fff;
+  float:left;
+  width:69.6%;
+  margin-right:3%;
+
+}
+
+#content #colRight {
+  height: auto;
+  position:relative;
+  margin-left:0px;
+  float:left;
+  width:27%;
+  border: 0px solid #1FA2E1;
+
+}
+
+#middle:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.reklama {
+  width:300px;
+  margin:0 auto;
+  border: 0px solid #1FA2E1;
+  margin-bottom:30px;
+}
+
+.reklama a img {
+  width:100%;
+}
+
+.reklama728 {
+  width:100%;
+  max-width:728px;
+  height:90px;
+  overflow:hidden;
+  margin:0 auto;
+  border: 0px solid #1FA2E1;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+#adsense160 {
+  float:right;
+  margin:0 auto;
+  border: 0px solid #1FA2E1;
+  margin-bottom:30px;
+  margin-top:30px;
+}
+
+#adsense336 {
+  overflow:hidden;
+  width:336px;
+  margin:0 auto;
+  border: 0px solid #1FA2E1;
+  margin-bottom:0px;
+}
+
+#adsense336right {
+  width:336px;
+  float:right;
+  border: 0px solid #1FA2E1;
+  margin-bottom:0px;
+}
+
+#adsense336left {
+  width:336px;
+  float:left;
+  border: 0px solid #1FA2E1;
+  margin-bottom:0px;
+}
+
+
+#adsense300 {
+  width:300px;
+  margin:0 auto;
+  border: 0px solid #1FA2E1;
+  margin-bottom:30px;
+  margin-top:30px;
+}
+
+#adsense336gl {
+  width:336px;
+  margin:0 auto;
+  margin-top:23px;
+}
+
+#adsense728 {
+  padding-top:30px;
+  width:728px;
+  height: 90px;
+  margin:0 auto;
+  border:0px solid #000;
+
+}
+
+#gooads {
+  padding-top:29px;
+  width:728px;
+  height: 90px;
+  margin: 0 auto;
+  border:0px solid #000;
+
+}
+
+#fixblock {
+  margin-left:64.6%;
+}
+
+/* -------------------------------
+Директ
+----------------------------------*/
+
+.direct {
+  margin-bottom:10px;
+}
+
+
+/* -------------------------------
+Директ
+----------------------------------*/
+
+/* -------------------------------
+HEADER ELEMENTS
+----------------------------------*/
+
+/* bottomMenu */
+
+#fdw {
+  z-index: 1000;
+  border: 0px solid #000;
+  position:relative;
+  max-width:1200px;
+  width:100%;
+  height:60px;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+#fdw select {
+  display:none; /* Для дисплеев мобильных устройств */
+}
+#fdw ul {
+  margin-left:70px;
+  display:block;
+  z-index:999999;
+}
+#fdw ul li {
+  display:inline-block;
+  margin-right:-4px;
+  position:relative;
+}
+#fdw ul li a:link, #fdw ul li a:visited {
+  padding:17px 20px 18px 20px;
+  color:#fff;
+  font-size:16px;
+  display:inline-block;
+  position:relative;
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+#fdw ul li:hover a, #fdw ul li a:active {
+  background: #444;
+  border-bottom:7px solid #444;
+  color:#fff;
+  text-decoration:none;
+}
+#fdw ul li span {
+  position:absolute;
+  right:0px;
+  bottom:6px;
+  width:7px;
+  height:8px;
+  margin:0 0 0 0px;
+  float:right;
+  display:block;
+
+  font:0/0 a;
+}
+#fdw ul li.current {
+  border-bottom:0px solid #e25d29;
+}
+#fdw ul li.current a {
+  color:#333;
+  cursor: default;
+}
+#fdw ul li.current a span {
+  background:url('../images/nav_arrow.png') no-repeat left 0;
+}
+#fdw ul li.current ul li a {
+  cursor:pointer;
+}
+
+/*===== Стили для sub_menu =======*/
+#fdw ul li ul.sub-menu {
+  position:absolute;
+  top:62px;
+  left:0;
+  margin:0;
+  padding:0;
+  background:#444;
+  border:0px solid #ececec;
+
+  display:none;
+  z-index:999999;
+
+}
+#fdw ul li ul.sub-menu li.arrow_top {
+  position:absolute;
+  top:-12px;
+  left:12px;
+  width:13px;
+  height:8px;
+  display:block;
+  border:none;
+
+}
+#fdw ul li ul.sub-menu li {
+  display: block;
+  float:none;
+  margin:0;
+  padding:0;
+  border-bottom:1px solid #3d3d3d;
+  width: 100%;
+}
+#fdw ul li ul.sub-menu li a {
+  display: block;
+  border-bottom:none;
+  white-space: nowrap;
+  padding:12px;
+  font-size:15px;
+  color:#999;
+}
+#fdw ul li ul.sub-menu li a:hover {
+  background:#3e3e3e;
+  color:#fff;
+}
+#fdw ul li ul.sub-menu li a.subCurrent {
+  color:#e25d29;
+  cursor:default;
+}
+#fdw ul li ul.sub-menu li a.subCurrent:hover {
+  background:none;
+}
+/*===========================================*/
+
+/* Для всех мобильных устройств */
+@media only screen and (max-width: 900px) {
+
+  .logo h1{
+    font-size: 26px;
+  }
+
+  /* Навигационное меню */
+  #fdw ul li {
+    display:none;
+  }
+  #fdw select {
+    width:40%;
+    display:block;
+    margin-bottom:0px;
+    cursor:pointer;
+    padding:6px;
+    background:#f9f9f9;
+    border:1px solid #e3e3e3;
+    color:#777;
+    margin-top:12px;
+    margin-left:0px;
+  }
+
+  .bottomMenubg{
+    padding-top:5px;
+  }
+}
+
+.bottomMenu {
+  position:absolute;
+  left:0px;
+  top:17px;
+}
+
+.bottomMenubg{
+  border-bottom:7px solid #019cd0;
+  width:100%;
+  background: #00a8e0;
+  height:55px;
+  z-index: 4;
+  position:relative;
+}
+
+.bottomMenuhomelink a {
+  z-index: 4;
+  border:0px solid #7a9e0e;
+  width:70px;
+  background: #019cd0 image-url("bottomMenuhomelink.png") 23px 16px no-repeat;
+  height:62px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  -moz-transition: all 0.2s 0.01s ease;
+  -o-transition: all 0.2s 0.01s ease;
+  -webkit-transition: all 0.2s 0.01s ease;
+}
+
+.bottomMenuhomelink a:hover {
+  background: #00b4f0 image-url("bottomMenuhomelink.png") 23px 25px no-repeat;
+}
+
+#bottomMenublock {
+  border: 0px solid #000;
+  position:relative;
+  width:1200px;
+  height:60px;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+/* -------------------------------
+      Блок "Последние посты"
+----------------------------------*/
+
+#lpblock {
+  border-bottom: 0px solid #eee;
+  background: #fff;
+  position:relative;
+  width: 100%;
+  height:70px;
+  margin:0 auto;
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Firefox */
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Safari и Chrome */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05); /* Параметры тени */
+}
+
+#lpblockInner {
+  border: 0px solid #ccc;
+  position:relative;
+  width: 100%;
+  max-width:1200px;
+  height:70px;
+  margin:0 auto;
+  margin-top:0px;
+}
+
+#lpblock #lpblockInner h2 {
+  font-family: "Segoe UI Light";
+  color:#b2b2b2;
+  background: image-url("lpblockInner.png") 0px 20px no-repeat;
+  font-weight:100;
+  padding:25px 0px 20px 40px;
+  margin-top:0px;
+  font-size:2em;
+}
+
+/*----------------------------
+          Логотип
+------------------------------*/
+
+.logo {
+  position:absolute;
+  left:0px;
+  top:26px;
+}
+
+/* Верхнее правое меню */
+
+.topMenuRight {
+  position:absolute;
+  right:0px;
+  top:55px;
+  border: 0px solid #1FA2E1;
+}
+
+.topMenuRight ul li {
+  float:left;
+}
+
+.topMenuRight li a{
+  font-family: "Segoe UI Semibold";
+  text-shadow: none;
+  color:#fff;
+  text-decoration:none;
+  font-size:17px;
+  margin-left:0px;
+  padding:10px 3px 20px 24px;
+  border-bottom: 0px solid #fff;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.topMenuRight li a:hover {
+  color:#005774;
+  border-bottom: 0px solid #d8514a;
+}
+
+/*----------------------------
+       Основной контент
+------------------------------*/
+
+/*#######################
+       Инфо панель
+#########################*/
+
+.infobig {
+  width:100%;
+  padding-left:0px;
+  margin-bottom:15px;
+  margin-top:15px;
+  font-size:13px;
+  line-height:100%;
+  color:#999;
+}
+
+.infobig a {
+  color:#999;
+}
+
+.infobig a:hover {
+  color:#ed3e7c;
+}
+
+.info {
+  margin: 0 auto;
+  width:90%;
+  padding-left:0px;
+  margin-bottom:15px;
+  margin-top:15px;
+  font-size:13px;
+  line-height:100%;
+  color:#999;
+}
+
+.info a {
+  line-height:20px;
+  color:#999;
+}
+
+.info a:hover {
+  color:#ed3e7c;
+}
+
+.autorpostbox {
+  position:absolute;
+  left:20px;
+  bottom:20px;
+}
+
+.autorpostbox a {
+  color:#00b4f0;
+}
+
+.autorpostbox a:hover {
+  color:#ed3e7c;
+}
+
+.autorpostbox img {
+  float:left;
+  border-radius: 4px;
+  margin-top:2px;
+}
+
+.autorpostbox span {
+  font-weight:100;
+  margin-top:0px;
+  margin-left:8px;
+  float:left;
+  font-size:15px;
+}
+
+.autorpostbox p{
+  color:#999;
+  margin-top:0px;
+  margin-left:43px;
+  font-size:11px;
+}
+
+/*#######################
+    Конец Инфо панель
+#########################*/
+
+/*#######################
+  Основной большой блок
+#########################*/
+
+.postBoxbig {
+  background: #fff;
+  padding:2.43%;
+  position:relative;
+  border:0px solid #f3f3f3;
+  width:94.7%;
+  margin-bottom:55px;
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Firefox */
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Safari и Chrome */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Параметры тени */
+}
+
+.postBoxbig h2 a {
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#222;
+  font-weight:100;
+  font-size:30px;
+  line-height:35px;
+  -moz-transition: all 0.2s 0.01s ease;
+  -o-transition: all 0.2s 0.01s ease;
+  -webkit-transition: all 0.2s 0.01s ease;
+}
+
+.postBoxbig h2 a:hover {
+  color:#00b4f0;
+}
+
+.textPreviewbig {
+  font-size:15px;
+  margin-bottom:60px;
+}
+
+.postThumbbig{
+
+  overflow:hidden;
+  margin-bottom:10px;
+}
+
+.postThumbbig img{
+  border-radius: 6px;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.postThumbbig img:hover{
+  border-radius: 6px;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/*#######################
+Конец Основной большой блок
+#########################*/
+
+/*#######################
+  Последние посты
+#########################*/
+
+.postBox {
+  overflow:hidden;
+  border-radius: 5px 5px 0px 0px;
+  background: #fff;
+  float:left;
+  position:relative;
+  border:0px solid #f3f3f3;
+  width:46%;
+  height:530px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:50px;
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Firefox */
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Safari и Chrome */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Параметры тени */
+}
+
+.first {
+  margin-right:7.5%;
+}
+
+.postBox h2 {
+  margin: 0 auto;
+  width:90%;
+  border:0px solid #555;
+}
+
+.postBox h3 {
+  font-size: 40px;
+  margin: 0 auto;
+  margin-top: 60px;
+  color:#ddd;
+  text-align:center;
+  width:90%;
+  border:0px solid #555;
+}
+
+.postBox h2 a {
+  font-family: "Segoe UI Regular", Tahoma, Helvetica, Sans-Serif;
+  color:#222;
+  font-weight:100;
+  font-size:0.9em;
+  line-height:25px;
+  -moz-transition: all 0.2s 0.01s ease;
+  -o-transition: all 0.2s 0.01s ease;
+  -webkit-transition: all 0.2s 0.01s ease;
+}
+
+.postBox h2 a:hover {
+  color:#00b4f0;
+}
+
+.postBox .textPreview {
+  margin: 0 auto;
+  width:90%;
+  border:0px solid #555;
+  font-size:15px;
+  margin-bottom:0px;
+}
+
+.postBox .infopost {
+  border:0px solid #555;
+  float:left;
+  padding-left:0px;
+  margin-bottom:15px;
+  margin-top:15px;
+  width:50%;
+  font-size:13px;
+  line-height:100%;
+  color:#999;
+}
+
+.postBox .postThumb{
+  margin-bottom:10px;
+  overflow:hidden;
+
+}
+
+.postBox .postThumb a img{
+  width:100%;
+  border-radius: 5px 5px 0px 0px;
+  border:0px dotted #555;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.postThumb a img:hover{
+  border-radius: 6px;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.more-link a {
+  border-radius: 3px;
+  background: #e7e7e7 url(images/more-link.png) 8px 9px no-repeat;
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  font-weight:500;
+  color:#888;
+  font-size:15px;
+  padding:6px 11px 9px 31px;
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+.more-link a:hover {
+  background:#00b4f0 url(images/more-link.png) 13px 9px no-repeat;
+  color:#fff;
+}
+
+.postBox .metkablue {
+  width:16px;
+  height:31px;
+  background: url(images/metka.png) 0px 0px no-repeat;
+  position:absolute;
+  left:-25px;
+  top:17px;
+  border:0px solid #000;
+}
+
+.postBox .avaautor {
+  width:65px;
+  height:65px;
+  background: url(images/krugheart.png) 0px 0px no-repeat;
+  position:absolute;
+  left:-98px;
+  top:0px;
+  border:0px solid #000;
+}
+
+.postBox .avaautor img {
+  border-radius: 50px;
+  border:6px solid #e5e5e5;
+}
+
+.postBox .time {
+  font-size:13px;
+  text-align: center;
+  color:#00b4f0;
+  position:absolute;
+  left:-52px;
+  top:70px;
+  border:0px solid #000;
+}
+
+.postBox .time span {
+  text-align: center;
+  font-size:28px;
+}
+
+/*#######################
+  Конец Последние посты
+#########################*/
+
+/* --------------------------------
+            Сайдбар
+-----------------------------------*/
+
+/* --------------------------------
+           Блоки с миниатюрами
+-----------------------------------*/
+
+.rightBoxtumb {
+  border: 0px solid #e4e4e4;
+  position:relative;
+  margin-top:30px;
+  margin-left:0px;
+  width:100%;
+  margin-bottom:18px;
+}
+
+.rightBoxtumb p {
+  margin-top:15px;
+  font-size:15px;
+  color:#ccc;
+}
+
+.rightBoxtumb p a {
+  font-size:13px !important;
+  border-radius: 3px;
+  background: #75d4f3;
+  padding:1px 3px 3px 3px;
+  color:#fff !important;
+}
+
+.rightBoxtumb p a:hover {
+  background: #00a5dc;
+}
+
+.rightBoxtumbline {
+  background: url(images/rightBoxline.png) 0px 0px no-repeat;
+  margin-top:0px;
+  margin-left:0px;
+  width:300px;
+  height:2px;
+  margin-bottom:5px;
+
+}
+
+.rightBoxtumb h2 {
+  background: url(images/lineh2.png) 0px 0px no-repeat;
+  border-top: 1px solid #e4e4e4;
+  margin-bottom:15px;
+  font-size:22px;
+  font-weight:100;
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#00b4f0;
+  display:block;
+  padding:10px 0px 0px 0px;
+}
+
+.rightBoxtumb h2 a {
+  color: #ed3e7c;
+}
+
+.rightBoxtumb h2 a:hover {
+  color: #000;
+}
+
+.rightBoxtumb ul li a{
+  color: #000;
+}
+
+.rightBoxtumb ul li a:hover{
+  color: #00b4f0;
+}
+
+.rightBoxtumb ul li{
+  font-family: "Segoe UI Regular", Tahoma, Helvetica, Sans-Serif;
+  font-weight:100;
+  position:relative;
+  height:95px;
+  padding:7px 0px;
+  border-bottom:0px solid #dad9ca;
+  font-size:18px;
+  line-height: 20px;
+}
+
+.rightBoxtumb ul li img{
+  border-radius: 5px;
+  position:relative;
+  float:left;
+  width:120px;
+  height:75px;
+  border: 0px solid #c5dba4;
+  background: #fff;
+  margin-right:15px;
+}
+
+/* --------------------------------
+     Конец Блоки с миниатюрами
+-----------------------------------*/
+
+.rightBox {
+  position:relative;
+  z-index:9999;
+  margin-top:0px;
+  margin-left:0px;
+  width:100%;
+  margin-bottom:30px;
+
+}
+
+.rightBox h2 {
+  border-top: 1px solid #e4e4e4;
+  font-size:22px;
+  font-weight:100;
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#00b4f0;
+  display:block;
+  padding:10px 0px 0px 0px;
+}
+
+.rightBox ul li{
+  padding:20px 0px;
+  border-bottom:1px solid #e5e5e5;
+  font-size:15px;
+  line-height: 16px;
+  color: #ccc;
+}
+
+.rightBox a {
+  color:#333;
+  line-height:21px;
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+.rightBox a:hover {
+  color: #00b4f0;
+}
+
+.vgplus {
+  overflow: hidden;
+  border:0px solid #000;
+  margin-top:33px;
+  width:100%;
+  margin-bottom:30px;
+}
+
+/*----------------------------
+       Сингл контент
+------------------------------*/
+
+#authorDetails {
+  min-height:90px;
+  background: #f9f9f9;
+  border:0px solid #000;
+  width:100%;
+  margin-bottom:40px;
+  margin-left:-20px;
+  padding:20px;
+}
+
+#authorDetails p {
+  margin-top:0px;
+}
+
+#authorDetails img {
+  border:1px solid #eee;
+  border-radius: 4px;
+  float:left;
+  margin-right:20px;
+}
+
+#authorDetails h4 {
+  border-bottom: 0px solid #eee;
+  border-top: none;
+  color:#555;
+  font-size:25px;
+  font-weight:normal;
+  margin-top:0px;
+  line-height:100%;
+  margin-bottom:0px;
+  margin-left:20px;
+  padding-top:0px;
+  padding-bottom:10px;
+}
+
+.breadcrumb {
+  padding-top:4px;
+}
+
+.breadcrumb h4 {
+  line-height:23px;
+  display: block;
+  border:0px solid #000;
+  width:100%;
+  margin-bottom:8px;
+}
+
+.breadcrumb a {
+  text-transform: uppercase;
+  margin-top:25px;
+  color:#08A3D9;
+  font-size:18px;
+}
+
+.breadcrumb span{
+  text-transform: uppercase;
+  margin-top:25px;
+  color:#000;
+  font-size:18px;
+}
+
+.breadcrumb a:hover {
+  color:#4991bb;
+}
+
+.singlecont {
+
+  background: #fff;
+  padding:2.43%;
+  position:relative;
+  border:0px solid #f3f3f3;
+  width:94.7%;
+  margin-bottom:55px;
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Firefox */
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Для Safari и Chrome */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Параметры тени */
+}
+
+.singlecont h1 {
+  border-bottom: 1px solid #eee !important;
+  padding-bottom: 5px !important;
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#444;
+  font-size:28px;
+  font-style:normal;
+  padding:0px 0 0px;
+  line-height:100%;
+  margin-bottom:20px;
+}
+
+.singlecont .hrdown {
+  width:655px;
+  height:16px;
+  margin-bottom:25px;
+  margin-top:27px;
+}
+
+.singlecont .infocont {
+  border-bottom:1px solid #eee;
+  margin-bottom:5px;
+  padding-bottom:20px;
+  margin-top:15px;
+  font-size:14px;
+  line-height:100%;
+  color:#c0c0c0;
+}
+
+.singlecont .infocont a {
+  color:#888;
+  border-bottom:1px solid #ddd;
+}
+
+.singlecont .infocont a:hover {
+  color:#ed3e7c;
+}
+
+.singlecont a {
+  color: #00b4f0;
+}
+
+.singlecont a:hover {
+  color: #ed3e7c;
+  border-bottom:1px solid #ddd;
+}
+
+.singlecont .textPr {
+  margin-top:20px;
+}
+
+.singlecont .textPr h3 {
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#dc5a54;
+  font-size:25px;
+  font-style:normal;
+  padding-top:10px;
+  line-height:100%;
+  margin-bottom:20px;
+}
+
+.singlecont ul {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.cont {
+  color:#555;
+  font-size:17px;
+  line-height:24px;
+  border-radius: 6px;
+}
+
+.cont img {
+  border-radius: 6px;
+  margin-bottom:10px;
+  border:1px solid #eee;
+}
+
+.cont ul {
+
+  margin-bottom:25px;
+}
+
+.cont ul li {
+  width:98%;
+  padding:5px 0 5px 18px;
+  color:#000;
+  font-weight:normal;
+  line-height:22px;
+  margin-bottom:0px;
+}
+
+.cont ol li {
+  width:660px;
+  padding:5px 0 5px 5px;
+  color:#000;
+  margin-left:25px;
+  font-weight:normal;
+  line-height:18px;
+}
+
+.cont h1 {
+  background: none;
+  color:#444;
+  font-size:33px;
+  font-weight:bold;
+  margin-top:20px;
+  line-height:100%;
+  margin-bottom:20px;
+  padding-bottom:7px;
+}
+
+.cont h2,h3,h4 {
+  width:100%;
+  border-top: 1px solid #eee;
+  color:#333;
+  font-size:28px;
+  font-weight:normal;
+  margin-top:7px;
+  line-height:100%;
+  margin-bottom:40px;
+  padding-top:10px;
+}
+
+.singlecont p {
+  margin-bottom:15px;
+}
+
+/* Теги */
+
+.postTags{
+  margin-bottom:50px;
+  margin-top:50px;
+}
+
+.postTags a{
+  border-radius: 3px;
+  border:none;
+  color:#999;
+  padding: 8px 10px 8px 10px;
+  font-size:12px;
+  background: #f9f9f9;
+  margin-right:8px;
+  text-transform: uppercase;
+  -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;
+}
+
+.postTags a:hover{
+  border:none;
+  background: #00b4f0;
+  color:#fff;
+}
+
+/*----------------------------
+FOOTER ELEMENTS
+------------------------------*/
+
+.logofooter {
+  border: 0px solid #fff;
+  position:absolute;
+  left:0px;
+  top:25px;
+}
+
+#footernav {
+  position:absolute;
+  right:0px;
+  top:30px;
+  border: 0px solid #1FA2E1;
+}
+
+#footernav ul li {
+  float:left;
+}
+
+#footernav li a{
+  font-family: "Segoe UI Semibold";
+  text-shadow: none;
+  color:#fff;
+  text-decoration:none;
+  font-size:17px;
+  margin-left:0px;
+  padding:0px 12px 0px 12px;
+  border-bottom: 0px solid #fff;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#footernav li a:hover {
+  color:#005774;
+  border-bottom: 0px solid #d8514a;
+}
+
+#footer {
+  position:relative;
+  z-index: 9999;
+  margin-top:0px;
+  border-top:0px solid #fff;
+  background: #00b4f0;
+}
+
+#footerInner {
+  z-index: 9999;
+  border: 0px solid #d8514a;
+  height:100px;
+  position:relative;
+  width: 100%;
+  max-width:1200px;
+  margin:0 auto;
+  color:#ccc;
+  overflow:hidden;
+  padding-bottom:20px;
+}
+
+#footerInner .boxFooter {
+  border-top:7px solid #00c1d9;
+  float:left;
+  width:20%;
+  margin-top:0px;
+  margin-right:5%;
+  -moz-transition: all 0.3s 0.05s ease;
+  -o-transition: all 0.3s 0.05s ease;
+  -webkit-transition: all 0.3s 0.05s ease;
+}
+
+#footerInner .boxFooter:hover {
+  border-top:7px solid #dc5954;
+}
+
+#footerInner .boxFooter p{
+  line-height:18px;
+  color: #ccc;
+  font-size:13px;
+}
+
+#footerInner .last {
+  margin-right:0;
+}
+
+#footerInner h2 {
+  font-weight:bold;
+  color: #fff;
+  font-size:18px;
+  padding:10px 0 5px 10px;
+  margin-bottom:0px;
+}
+
+#footerInner .boxFooter ul li  {
+  padding:10px 0px 10px 0px;
+  border-bottom:0px dashed #61544c;
+  color:#fff;
+  font-size:10px;
+  font-style:italic;
+}
+
+#footerInner .boxFooter ul li img{
+  padding:3px;
+  border:1px solid #555;
+  margin:2px 8px 7px 0px;
+  display:block;
+  height:45px;
+  width:45px;
+  float:left;
+}
+
+#footerInner .boxFooter ul li br {
+  line-height:5px;
+}
+
+#footerInner .boxFooter ul li a {
+  padding-left:17px;
+  text-decoration:none;
+  color:#ccc;
+  font-size:13px;
+  font-style:normal;
+}
+
+#footerInner .boxFooter ul li a:hover {
+  color:#777;
+}
+
+
+#copyright {
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+
+#copyright p {
+  line-height:16px;
+  font-size:15px;
+  float:left;
+  margin-top:12px;
+  color:#636363;
+}
+
+/*----------------------------
+         популярные посты
+------------------------------*/
+
+.relatedPosts  {
+  width:105%;
+  height:320px;
+  list-style:none;
+  border:0px solid #333;
+}
+
+.relatedPosts h2{
+  width:95.5%;
+  margin-top:30px;
+  color:#555;
+  padding: 10px 0px 20px 0px;
+  margin-left:0px;
+  border-top:1px solid #eee;
+  font-weight: 100;
+  font-size:27px;
+}
+
+.relatedPosts img  {
+  border-radius: 6px;
+  float:left;
+  color:#999;
+  margin-bottom:10px;
+}
+
+.relatedPosts a  {
+  border-bottom:none;
+  font-size:17px;
+  color:#00b4f0;
+  font-weight: 600;
+}
+
+.relatedPosts a:hover  {
+  border-bottom:none;
+  color:#555;
+}
+
+.relatedPosts li  {
+  margin-right:2.5%;
+  width:30.2%;
+  float:left;
+  padding:20px 0;
+  font-size:14px;
+  padding: 0px;
+  border:0px solid #333;
+  list-style:none;
+  margin-bottom:20px;
+}
+
+/* Комментарии
+-----------------------------------*/
+
+.commvk {
+  width:100%;
+  opacity: 0.7;
+  margin-bottom:50px;
+  -moz-transition: opacity 0.3s 0.05s ease;
+  -o-transition: opacity 0.3s 0.05s ease;
+  -webkit-transition: opacity 0.3s 0.05s ease;
+}
+
+.commvk:hover {
+
+  opacity: 1;
+
+}
+
+.h2comments {
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  color:#555;
+  padding: 0px 0px 25px 0px;
+  margin-left:0px;
+  border:0px solid #333;
+  font-weight: 100;
+  font-size:28px;
+
+}
+
+.h2comments a.addComment {
+  border:none;
+  color:#fff;
+  padding: 10px 15px 14px 15px;
+  font-size:18px;
+  background: #5cbfd7;
+  margin-top:-10px;
+  margin-right:0px;
+  display:block;
+  float:right;
+  -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;
+}
+
+.h2comments a.addComment:hover {
+  background: #dc5a54;
+  color:#fff;
+}
+
+h2#commentsForm {
+  margin:0;
+  padding-top:0;
+}
+
+#content #colLeft ul.commentlist {
+  width:100%;
+  list-style:none;
+  list-style-position:outside;
+  display:block;
+  margin:20px 0;
+  border-top:0px dotted #7a9e0e;
+  border-bottom:0px dotted #7a9e0e;
+  padding:0;
+}
+
+#content #colLeft ul.commentlist ul {
+  list-style-type:none;
+  list-style-position:outside;
+  margin:0;
+}
+
+#content #colLeft ul.commentlist li {
+  padding:0 0 20px 40px;
+  position:relative;
+  border-bottom:1px solid #E5E8EA;
+  margin-top:25px;
+  background:none;
+}
+
+#content #colLeft ul.commentlist li p{
+  font-size:13px;
+  margin:10px 0;
+  margin-left:10px;
+}
+
+#content #colLeft ul.commentlist li .comment-meta, #content #colLeft ul.commentlist li .text  {
+  margin-left:20px;
+}
+
+#content #colLeft ul.commentlist li .comment-meta span {
+  font-size:11px;
+  color:#999;
+}
+
+#content #colLeft ul.commentlist li .comment-meta {
+  font-size:18px;
+  margin-left:30px;
+}
+
+
+#content #colLeft ul.commentlist li .avatar {
+  background:#fff;
+  border:1px solid #eee;
+  position:absolute;
+  left:0;
+  top:5px;
+}
+
+#content #colLeft ul.commentlist .reply {
+  position:absolute;
+  right:10px;
+  top:0px;
+  text-align:center;
+  font-size:21px;
+}
+
+#content #colLeft ul.commentlist .reply a {
+  border-bottom:none;
+  display:block;
+  color:#e1e1e1;
+  -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;
+}
+
+#content #colLeft ul.commentlist .reply a:hover {
+  color:#5cbfd7;
+}
+
+#content #colLeft ul.commentlist li .children li {
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid #E5E8EA;
+  border-bottom:none;
+  overflow:hidden;
+  padding-bottom:0;
+}
+
+#content #colLeft ul.commentlist li .children li .avatar {
+  top:25px;
+}
+
+#content #colLeft ul.commentlist li .children li .reply {
+  top:15px;
+}
+
+/* Формы комментариев */
+
+.commenth {
+  font-family: "Segoe UI Regular", Tahoma, Helvetica, Sans-Serif;
+  color:#555;
+  padding: 0px 20px 25px 20px;
+  margin-left:35px;
+  border:0px solid #333;
+  font-weight: 100;
+  font-size:22px;
+}
+
+#commentform p {
+  margin:0;
+}
+
+#commentform label {
+  color:#777;
+  display:block;
+  padding:5px 0;
+}
+
+#commentform input, #commentform textarea {
+  border:1px solid #ddd;
+  padding:8px;
+  width:50%;
+  margin-bottom:10px;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+}
+
+#commentform input:focus, #commentform textarea:focus {
+  border:1px solid #0099FF;
+}
+
+#commentform textarea {
+  width:96%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+}
+
+#commentform input#submit{
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  border:none;
+  border-radius:0px;
+  color:#fff;
+  padding: 10px 15px 14px 15px;
+  font-size:18px;
+  background: #5cbfd7;
+  width:150px;
+  margin-right:0px;
+  display:block;
+  cursor:pointer;
+  -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;
+}
+
+#commentform input#submit:hover {
+  color:#fff;
+  background: #dc5a54;
+}
+
+blockquote {
+  width:90%;
+  border-left:5px solid #ccc;
+  padding-left:20px;
+  margin:15px 0 15px 25px;
+  font-size:14px;
+  color:#777;
+}
+
+blockquote:hover {
+  border-left:5px solid #5cbfd7;
+  color:#444;
+}
+
+/* Навигация */
+
+.emm-paginate { margin-bottom:60px; clear:both; }
+.emm-paginate a { font-size:20px; border: 0px solid #ccc; background: #00b4f0; border-radius: 3px; color:#fff; margin-right:7px; text-align:center; text-decoration:none; padding:0px 9px 4px 9px; -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;}
+.emm-paginate .emm-title {color:#555; margin-right:4px;}
+.emm-paginate .emm-gap {color:#999; margin-right:4px;}
+.emm-paginate a:hover, .emm-paginate a:active, .emm-paginate .emm-current { border-radius: 4px; color:#fff; background:#ed3e7c; margin-right:7px; padding:0px 9px 4px 9px; font-size:20px;}
+.emm-paginate .emm-page {}
+.emm-paginate .emm-prev, .emm-paginate .emm-next {}
+
+/* Contact Form */
+
+#contact label {
+  display:block;
+  padding:5px 0;
+}
+
+#contact input, #contact textarea {
+  border:1px solid #ddd;
+  padding:8px;
+  width:50%;
+  margin-bottom:10px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+}
+
+#contact textarea {
+  width:80%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
+}
+
+#contact input.submit{
+  border-radius:4px;
+  font-family: "Segoe UI Semilight", Tahoma, Helvetica, Sans-Serif;
+  border:none;
+  color:#fff;
+  padding: 10px 15px 14px 15px;
+  font-size:18px;
+  background: #00b4f0;
+  width:150px;
+  margin-right:0px;
+  display:block;
+  cursor:pointer;
+  -moz-transition: all 0.2s 0.01s ease-in;
+  -o-transition: all 0.2s 0.01s ease-in;
+  -webkit-transition: all 0.2s 0.01s ease-in;
+}
+
+#contact input.submit:hover{
+  color:#fff;
+  background: #ed3e7c;
+}
+
+.errormsg, .successmsg{
+  background:#FEF4F1;
+  border:1px solid #F7A68A;
+  color:#DA4310;
+  padding:10px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+}
+
+.successmsg {
+  background:#F5FAF1;
+  border:1px solid #C2E1AA;
+  color:#8FA943;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+}
+
+/* -------------------------------
+След. и пред. записи
+----------------------------------*/
+
+.lv {
+  opacity: 0.9;
+  position:absolute;
+  right:84px;
+  bottom:20px;
+}
+
+.lv:hover {
+  opacity: 0.5;
+}
+
+#sochknop {
+  margin-bottom:100px;
+  margin-left:120px;
+  margin-top:45px;
+  -moz-transition: all 0.3s 0.05s ease;
+  -o-transition: all 0.3s 0.05s ease;
+  -webkit-transition: all 0.3s 0.05s ease;
+}
+
+#sochknop:hover {
+  margin-top:45px;
+}
+
+#sochknop span {
+  float:left;
+}
+
+#tweet {
+  float: left;
+  margin-right:45px;
+}
+
+#gplus {
+  margin-left:-70px;
+  float: left;
+  margin-right:45px;
+}
+
+#vk {
+  float: left;
+  margin-right:35px;
+}
+
+
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.625em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.625em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------
+Адаптивный дизайн
+----------------------------------*/
+
+@media screen and (min-width:100px) and (max-width:1200px) {
+
+  .logo h1{
+    font-size: 22px;
+  }
+
+  .reklama {
+    width:300px;
+    margin:0 auto;
+    border: 0px solid #1FA2E1;
+    margin-bottom:30px;
+  }
+
+  #sochknop {
+    margin-bottom:100px;
+    margin-left:5%;
+    margin-top:45px;
+
+  }
+
+  /* -------------------------------
+  LAYOUT STRUCTURE
+  ----------------------------------*/
+
+  #authorDetails {
+    background: none;
+  }
+
+  #content #colLeft {
+    border:0px solid #dedede;
+    width:69.1%;
+  }
+
+  #wrapper {
+    border:0px solid #dedede;
+    width: 90%;
+  }
+
+  #headerInner {
+    width: 90%;
+  }
+
+  /* Верхнее правое меню */
+
+  .topMenuRight {
+    position:absolute;
+    right:0px;
+  }
+
+  .topMenuRight li a{
+    font-size:15px;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+  }
+
+  #copyright {
+    position:absolute;
+    right:0px;
+    top:0px;
+  }
+
+  #fdw {
+    width: 90%;
+  }
+
+  #lpblockInner {
+    width: 90%;
+  }
+
+  .postBoxbig{
+    padding:2.83%;
+    width:93.7%;
+  }
+
+  .rightBoxtumb ul li {
+    font-size:15px;
+    font-weight:100;
+  }
+
+  .rightBoxtumb p {
+    margin-top:5px;
+    font-size:13px;
+    color:#ccc;
+  }
+
+  /* -------------------------------
+  Футер
+  ----------------------------------*/
+
+  #footernav {
+    position:absolute;
+    right:0px;
+    top:30px;
+  }
+
+  #footernav li a{
+    font-size:15px;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+  }
+
+  #footerdownInner {
+    width: 90%;
+
+  }
+
+  #footerInner {
+    width: 90%;
+  }
+
+  #footerInner .boxFooter {
+    width:20%;
+    margin-right:5%;
+  }
+}
+
+@media screen and (min-width:100px) and (max-width:900px) {
+
+  .logo h1{
+    font-size: 24px;
+    text-align:center;
+  }
+
+  #fixblock {
+    display: none;
+  }
+
+  #tweet {
+    display: none;
+  }
+
+  #gplus {
+    display: none;
+  }
+
+  #vk {
+    display: none;
+  }
+
+  #sticker {
+    display: none;
+  }
+
+  .reklama {
+    width: 300px;
+    margin:0 auto;
+    border: 0px solid #1FA2E1;
+    margin-bottom:30px;
+  }
+
+  .breadcrumb {
+    font-size:20px;
+  }
+
+  .breadcrumb a {
+    font-size:20px;
+  }
+
+  /* Верхнее правое меню */
+
+  .bottomMenuhomelink a {
+    display:none;
+  }
+
+  .sharenew {
+    position:absolute;
+    right:0px;
+    top:0px;
+  }
+
+  #lpblock {
+    margin-top:0px;
+  }
+
+  /*----------------------------
+            Логотип
+  ------------------------------*/
+
+  .logo  {
+    padding-top:10px;
+    border: 0px solid #000;
+    position:static;
+    margin: 0 auto;
+  }
+
+  /* Верхнее правое меню */
+
+  .topMenuRight {
+    clear:both;
+    position:static;
+    width: 100%;
+    border: 0px solid #333;
+    margin: 0 auto;
+    margin-top:15px;
+    padding-bottom:15px;
+  }
+
+  .topMenuRight ul li{
+    padding:20px 20px 21px 20px;
+    text-align: center;
+    float:none;
+    border: 0px solid #333;
+  }
+
+  .topMenuRight ul li{
+    border-bottom: 1px solid #00a4da;
+    background: #01ade7;
+  }
+
+  .topMenuRight ul li:hover{
+    background: #009fd4;
+  }
+
+  /* -------------------------------
+  LAYOUT STRUCTURE
+  ----------------------------------*/
+
+  #header {
+    border: 0px solid #000;
+    height:auto;
+  }
+
+  #headerInner {
+    border: 0px solid #ccc;
+    height:auto;
+  }
+
+  #wrapper {
+    width: 90%;
+  }
+
+
+  #content {
+    margin-top:40px;
+    border: 0px solid #1FA2E1;
+  }
+
+  #content #colLeft {
+    margin:0 auto;
+    float:none;
+    width:100%;
+    border:0px solid #ccc;
+  }
+
+  #content #colRight {
+    clear: both;
+    border:0px solid #333;
+    margin:0 auto;
+    float:none;
+    width:100%;
+  }
+
+  .postBoxbig{
+    padding:2.83%;
+    width:94.5%;
+  }
+
+  #first {
+    margin-right:8%;
+  }
+
+  #form-query {
+    width:97.4%;
+    padding:15px 0px 15px 2.5%;
+  }
+
+  /* -------------------------------
+  Футер
+  ----------------------------------*/
+
+  .footericon {
+    padding-top:0px;
+    border: 0px solid #000;
+    position:static;
+    width: 72px;
+    margin: 0 auto;
+    border:0px solid #333;
+  }
+
+  .logofooter {
+    padding-top:10px;
+    border: 0px solid #000;
+    position:static;
+    width: 277px;
+    margin: 0 auto;
+  }
+
+  #footer {
+    border: 0px solid #000;
+    height:auto;
+  }
+
+  #footerInner  {
+    border: 0px solid #ccc;
+    height:auto;
+  }
+
+  #footerInner {
+    width: 90%;
+  }
+
+  #footerInner .boxFooter {
+    float:none;
+    width:100%;
+    margin-right:0%;
+    margin-bottom:10px;
+  }
+
+  /* футер */
+
+  #footernav{
+    clear:both;
+    position:static;
+    width: 100%;
+    border: 0px solid #333;
+    margin: 0 auto;
+    margin-top:5px;
+    margin-bottom:15px;
+  }
+
+  #footernav ul li{
+    padding:20px 20px 21px 20px;
+    text-align: center;
+    float:none;
+    border: 0px solid #333;
+  }
+
+  #footernav ul li{
+    border-bottom: 1px solid #00a4da;
+    background: #01ade7;
+  }
+
+  #footernav ul li:hover{
+    background: #009fd4;
+  }
+
+  .sharenewfooter {
+    z-index: 4;
+    position:absolute;
+    left:40%;
+    top:50px;
+  }
+}
+
+@media screen and (min-width:100px) and (max-width:768px) {
+
+  .logo h1{
+    font-size: 20px;
+    text-align:center;
+  }
+
+  #adsense336gl {
+    width:336px;
+    margin:0 auto;
+    margin-top:23px;
+  }
+
+  .lv {
+    display: none;
+  }
+
+  #sticker {
+    display: none;
+  }
+
+  /* -------------------------------
+  След. и пред. записи
+  ----------------------------------*/
+
+  .nextpostlink a {
+    padding-right:0px;
+    background: none;
+  }
+
+  .nextpostlink a:hover {
+    background: none;
+    margin-right:0px;
+  }
+
+  .prepostlink {
+    margin-top:30px;
+  }
+
+  .prepostlink a:hover {
+    background: none;
+    margin-left:0px;
+  }
+
+  .prepostlink a {
+    background: none;
+    opacity: 0.7;
+    padding-left:0px;
+  }
+
+  .postBox {
+    float:none;
+    position:relative;
+    border:0px solid #dedede;
+    width:100%;
+    height:550px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:50px;
+  }
+
+  #first {
+    margin-right:0;
+  }
+
+  .postBoxcat {
+    float:none;
+    margin-top:30px;
+    margin-left:0px;
+    width:100%;
+    margin-bottom:30px;
+    border: 0px solid #7a7a7a;
+  }
+}
+
+@media screen and (min-width:100px) and (max-width:480px) {
+
+  .logo h1{
+    font-size: 16px;
+    text-align:center;
+  }
+
+  #sticker {
+    display: none;
+  }
+
+  .lv {
+    display: none;
+  }
+
+  #content {
+    border: 0px solid #1FA2E1;
+  }
+
+  .postBoxbig {
+    margin-bottom:30px;
+  }
+
+  .postBox {
+    margin-bottom:30px;
+  }
+
+  #first {
+    margin-right:0;
+    margin-bottom:30px;
+  }
+
+
+  .postBoxbig h2 a {
+    font-family: "Segoe UI Regular", Tahoma, Helvetica, Sans-Serif;
+    color:#222;
+    font-weight:100;
+    font-size:17px;
+    line-height:35px;
+
+  }
+
+  .infobig {
+
+    font-size:12px;
+    line-height:20px;
+
+  }
+
+  .textPreviewbig {
+    font-size:14px;
+    margin-bottom:60px;
+  }
+
+  .singlecont .infocont {
+    font-size:13px;
+    line-height:20px;
+  }
+
+  .singlecont h1 {
+    font-size:22px;
+  }
+
+  .cont  {
+    font-size:15px;
+
+  }
+
+}
