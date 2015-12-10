@@ -6,15 +6,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-<div class="shell-editor">
-  <% flash.each do |type, message| %>
-      <div class="alert <%= bootstrap_class_for(type) %> fade in">
-        <button class="close" data-dismiss="alert">×</button>
-        <%= message %>
+<% if user_signed_in? %>
+    <div class="shell">
+      <div class="border">
+        <%= render "editor/header" %>
+        <%= render "editor/menu" %>
+        <section id="wrapper">
+          <div id="middle">
+            <div id="content">
+              <% flash.each do |type, message| %>
+                  <div class="alert <%= bootstrap_class_for(type) %> fade in">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <%= message %>
+                  </div>
+              <% end %>
+              <article class="singlecont">
+                <%= yield %>
+              </article>
+            </div>
+          </div>
+        </section>
       </div>
-  <% end %>
-  <%= yield %>
-</div>
+    </div>
+<% end %>
+<% if !user_signed_in? %>
+    <div style="width:500px; margin:20px auto;">
+      <% flash.each do |type, message| %>
+          <div class="alert <%= bootstrap_class_for(type) %> fade in">
+            <button class="close" data-dismiss="alert">×</button>
+            <%= message %>
+          </div>
+      <% end %>
+      <%= yield %>
+    </div>
+<% end %>
 </body>
 </html>
+

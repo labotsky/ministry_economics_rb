@@ -1,0 +1,30 @@
+<%= form_for [:editor, @slider], :html => {:class => "form-horizontal slider"} do |f| %>
+    <% if @slider.errors.any? %>
+        <div id="error_expl" class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= pluralize(@slider.errors.count, "error") %> prohibited this slider from being
+              saved:</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @slider.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="control-group" style="margin-bottom: 20px">
+      <div class="controls">
+        <%= f.file_field :image, :class => 'filestyle' %>
+      </div>
+      <%= error_span(@slider[:image]) %>
+    </div>
+
+
+    <%= f.submit "Сохранить", :class => 'btn btn-primary' %>
+    <%= link_to "Отменить",
+                editor_sliders_path, :class => 'btn btn-default' %>
+
+<% end %>

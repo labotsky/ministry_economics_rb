@@ -1,0 +1,34 @@
+<%- model_class = Slider -%>
+<div class="page-header">
+  <h1>Слайдер</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Изображение</th>
+      <th>Дата создания</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sliders.each do |slider| %>
+      <tr>
+        <td><%= image_tag(slider.image_url(:thumb)) %></td>
+        <td><%=slider.created_at %></td>
+        <td>
+          <%= link_to "Редактировать",
+                      edit_editor_slider_path(slider), :class => 'btn btn-default btn-xs' %>
+          <%= link_to "Удалить",
+                      editor_slider_path(slider),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Добавить изображение",
+            new_editor_slider_path,
+            :class => 'btn btn-primary' %>

@@ -1,0 +1,17 @@
+<header id="header">
+  <div id="headerInner">
+    <div class="logo">
+      <h1>Административная консоль</h1>
+    </div>
+    <p style="color:#fff; float:right; font-weight: bold">
+      <%= "Вы вошли, как #{current_user.email}" %>
+    </p>
+    <nav class="topMenuRight">
+      <ul>
+        <li class="page_item">
+          <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

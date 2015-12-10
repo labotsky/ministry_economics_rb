@@ -41,7 +41,9 @@
         <div id="content">
           <div id="colLeft">
             <% if current_page?(url_for(:controller => 'static_pages', :action => 'home')) %>
+                <% if @sliders %>
                 <%= render "layouts/slider" %>
+                    <% end %>
             <% end %>
             <article class="singlecont">
               <%= yield %>
